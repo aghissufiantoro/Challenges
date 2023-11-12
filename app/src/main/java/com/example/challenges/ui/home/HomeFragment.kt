@@ -1,9 +1,11 @@
 package com.example.challenges.ui.home
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -11,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.challenges.R
 import com.example.challenges.databinding.FragmentHomeBinding
 
+@Suppress("UNREACHABLE_CODE")
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
@@ -19,6 +22,7 @@ class HomeFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -39,6 +43,7 @@ class HomeFragment : Fragment() {
             textView.text = it
         }
         return root
+
     }
 
 

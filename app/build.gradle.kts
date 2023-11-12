@@ -4,6 +4,8 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 android {
@@ -42,7 +44,9 @@ android {
 }
 
 dependencies {
-val lifecycle_version = "2.5.0"
+implementation("com.google.firebase:firebase-crashlytics:18.5.1")
+    implementation("com.google.firebase:firebase-analytics:21.5.0")
+    val lifecycle_version = "2.5.0"
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

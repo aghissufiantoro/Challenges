@@ -1,6 +1,9 @@
 package com.example.challenges
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.ViewGroup
+import android.widget.Button
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
@@ -11,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     private val viewModel by viewModels<HomeViewModel> { ViewModelFactories.getInstance(this) }
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -28,6 +32,17 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+        //        Crash
+        // Creates a button that mimics a crash when pressed
+        val btnCrash = Button(this)
+        btnCrash.text = "Huraaa ngecrash"
+        btnCrash.setOnClickListener {
+            throw RuntimeException("Huraaa ngecrash") // Force a crash
+        }
+
+        addContentView(btnCrash, ViewGroup.LayoutParams(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT))
     }
 }
 
