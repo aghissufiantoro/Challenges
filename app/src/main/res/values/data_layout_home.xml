@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="array_gambar_makanan">
+        <item>@drawable/dimsum</item>
+        <item>@drawable/kwasong</item>
+        <item>@drawable/spageti</item>
+        <item>@drawable/burger</item>
+        <item>@drawable/ayam</item>
+    </integer-array>
+    <integer-array name="array_nama_makanan">
+        <item>@string/dimsum</item>
+        <item>@string/kwasong</item>
+        <item>@string/spageti</item>
+        <item>@string/burger</item>
+        <item>@string/ayam</item>
+    </integer-array>
+    <integer-array name="array_harga_makanan">
+        <item>@string/harga_dimsum</item>
+        <item>@string/harga_kwasong</item>
+        <item>@string/harga_spageti</item>
+        <item>@string/harga_burger</item>
+        <item>@string/harga_ayam</item>
+    </integer-array>
+</resources>

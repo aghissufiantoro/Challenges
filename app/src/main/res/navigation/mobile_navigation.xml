@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/fragment_login"
+        android:name="com.example.challenges.ui.auth.LoginFragment"
+        android:label="@string/login"
+        tools:layout="@layout/fragment_login"/>
+
+    <fragment
+        android:id="@+id/fragment_register"
+        android:name="com.example.challenges.ui.auth.RegisterFragment"
+        android:label="@string/register_account"
+        tools:layout="@layout/fragment_register"/>
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.challenges.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_keranjang"
+        android:name="com.example.challenges.ui.dashboard.KeranjangFragment"
+        android:label="@string/title_keranjang"
+        tools:layout="@layout/fragment_akun" />
+
+    <fragment
+        android:id="@+id/navigation_akun"
+        android:name="com.example.challenges.ui.notifications.NotificationsFragment"
+        android:label="@string/title_akun"
+        tools:layout="@layout/fragment_keranjang" />
+</navigation>

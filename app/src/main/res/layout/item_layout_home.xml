@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:id="@+id/detail_item"
+    >
+
+    <ImageView
+        android:id="@+id/foto_makanan"
+        android:layout_width="91dp"
+        android:layout_height="92dp"
+        app:srcCompat="@drawable/ayam" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        >
+
+        <TextView
+            android:id="@+id/nama_makanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/burger"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/harga_makanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rp_25_000"
+
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
