@@ -17,5 +17,4 @@ class HomeViewModel(private val repository: StoryRepository): ViewModel() {
             repository.logout()
         }
     }
-    fun getAllStories(token: String,) = repository.getAllStories(token)
 }
