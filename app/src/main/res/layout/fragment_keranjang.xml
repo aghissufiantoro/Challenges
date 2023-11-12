@@ -31,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:spanCount="@integer/material_motion_duration_short_2"
         app:layout_constraintTop_toBottomOf="@+id/judul_keranjang"
-
+        android:contextClickable="true"
 
         />
 
