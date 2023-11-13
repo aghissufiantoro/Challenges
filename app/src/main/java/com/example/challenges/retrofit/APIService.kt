@@ -1,6 +1,5 @@
 package com.example.challenges.retrofit
 
-
 import com.example.challenges.data.response.LoginResponse
 import com.example.challenges.data.response.RegisterResponse
 import retrofit2.http.FormUrlEncoded
