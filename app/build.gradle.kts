@@ -44,8 +44,11 @@ android {
 }
 
 dependencies {
-implementation("com.google.firebase:firebase-crashlytics:18.5.1")
+
+    implementation("com.google.firebase:firebase-crashlytics:18.5.1")
     implementation("com.google.firebase:firebase-analytics:21.5.0")
+    implementation("com.google.firebase:firebase-auth:22.2.0")
+
     val lifecycle_version = "2.5.0"
 
     implementation("androidx.core:core-ktx:1.9.0")

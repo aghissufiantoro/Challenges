@@ -11,11 +11,11 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.challenges.Hasil
 import com.example.challenges.MainActivity
+import com.example.challenges.R
 import com.example.challenges.databinding.FragmentLoginBinding
 import com.example.challenges.ui.ViewModelFactories
 
 
-class LoginFragment {
     class LoginFragment : Fragment() {
         private var _binding: FragmentLoginBinding? = null
         private val binding get() = _binding!!
@@ -40,7 +40,7 @@ class LoginFragment {
 
         private fun setUpAction() {
             binding.btnLogin.setOnClickListener {
-                val action = LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
+                val action = R.id.action_loginFragment_to_registerFragment
                 findNavController().navigate(action)
             }
 
@@ -48,9 +48,12 @@ class LoginFragment {
                 val email = binding.etlogin.text.toString()
                 val password = binding.etpassword.text.toString()
 
+
 //                observeLogin(email, password)
             }
         }
+
+
 
 //        private fun observeLogin(email: String, password: String) {
 //            viewModel.login(email, password).observe(viewLifecycleOwner) {
@@ -91,4 +94,3 @@ class LoginFragment {
 //        }
 
     }
-}

@@ -16,6 +16,7 @@ import com.example.challenges.Hasil
 import com.example.challenges.MainActivity
 import com.example.challenges.R
 import com.example.challenges.databinding.FragmentRegisterBinding
+import com.example.challenges.ui.ViewModelFactories
 import com.example.challenges.util.toast
 import com.google.android.ads.mediationtestsuite.viewmodels.ViewModelFactory
 
@@ -23,7 +24,7 @@ class RegisterFragment : Fragment() {
 
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
-    private val viewModel by viewModels<RegisterViewModel> { ViewModelFactory.getInstance(requireActivity()) }
+    private val viewModel by viewModels<RegisterViewModel> { ViewModelFactories.getInstance(requireActivity())}
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,10 +39,9 @@ class RegisterFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         registerValidation()
-        playAnimation()
 
         binding.btnRegister.setOnClickListener {
-            val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
+            val action = R.id.action_registerFragment_to_loginFragment
             findNavController().navigate(action)
         }
     }
